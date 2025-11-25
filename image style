@@ -1,0 +1,3 @@
+Image.asset('lib/assets/p.jpg'),
+
+Image.network('https://images.pexels.com/photos/863963/pexels-photo-863963.jpeg?cs=srgb&dl=pexels-blaque-x-863963.jpg&fm=jpg')
