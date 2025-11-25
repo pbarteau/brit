@@ -1,0 +1,28 @@
+Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Text('hellooo'),
+              Text('maguyys'),
+            ]
+
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0),
+            color: Colors.tealAccent,
+            child: Text('one'),
+          ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.amberAccent,
+            child: Text('one'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.indigoAccent,
+            child: Text('one'),
+          ),
+        ],
+      ),
