@@ -1,0 +1,14 @@
+Container(
+        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
+        color: Colors.grey,
+        child: Text('heloo'),
+
+      ),
+
+
+Container(
+        padding: EdgeInsets.all(30.0),
+        color: Colors.grey,
+        child: Text('heloo'),
+
+      ),
