@@ -1,3 +1,8 @@
 # To add assets to your application, add an assets section, like this:
   assets:
     - lib/assets/
+
+
+To make the change, especially in non-internet editors run.....
+
+flutter pub get
