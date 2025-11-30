@@ -1,0 +1,79 @@
+import 'package:flutter/material.dart';
+import 'quote.dart';
+
+void main() {
+  runApp(const StateQuote());
+}
+
+class StateQuote extends StatefulWidget {
+  const StateQuote({super.key});
+
+  @override
+  State<StateQuote> createState() => _StateQuoteState();
+}
+
+class _StateQuoteState extends State<StateQuote> {
+  List<Quote> quotes = [
+    Quote(author: 'Mclaren Otieno', text: 'kwni sisi ni wanawake'),
+    Quote(author: 'Mbugua Kimani', text: 'Ongeza supu kwa hio waru'),
+    Quote(author: 'Mutua Kilonzo', text: 'make nyour mbalens mblound'),
+  ];
+
+  Widget quoteTemplate(quote) {
+    return Quotewidget(quote: quote);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.grey,
+        appBar: AppBar(
+          title: Text('Awesome Quotes'),
+          centerTitle: true,
+          backgroundColor: Colors.amberAccent,
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: quotes.map((quote) => quoteTemplate(quote)).toList(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Quotewidget extends StatelessWidget {
+  final Quote quote;
+
+  const Quotewidget({
+    required this.quote,
+    super.key,
+  });
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              quote.text,
+              style: TextStyle(fontSize: 18.0, color: Colors.black),
+            ),
+            SizedBox(height: 6.0),
+            Text(
+              quote.author,
+              style: TextStyle(fontSize: 15.0, color: Colors.black),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
